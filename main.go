@@ -2,9 +2,14 @@ package main
 
 import "fmt"
 
-func main() {
-	// lambda
-	f := func(x, y int) int { return x + y }
+func plus(x, y int) int {
+	return x + y
+}
 
-	fmt.Println(f(1, 3))
+var p = plus
+
+func main() {
+	// alias
+	fmt.Println(p(1, 4))
+
 }
