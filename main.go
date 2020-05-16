@@ -1,13 +1,10 @@
 package main
 
+import "fmt"
+
 func main() {
-	//
-}
+	// lambda
+	f := func(x, y int) int { return x + y }
 
-func div(a, b int) (int, int) {
-	if b == 0 {
-		return 0, 1
-	}
-
-	return 0, a / b
+	fmt.Println(f(1, 3))
 }
