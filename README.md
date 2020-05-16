@@ -1,3 +1,3 @@
 ## Overview
 
-This repository is for practice of go.
+This repository is for practicing golang.
