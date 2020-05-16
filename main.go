@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	f := 3.14
-	n := int(f)
-	fmt.Println(n)
+	// rune型
+	a := 'a'
+	b := 'b'
+	fmt.Println(a, b, b-a)
 }
