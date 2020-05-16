@@ -3,7 +3,23 @@ package main
 import "fmt"
 
 func main() {
-	// operator
-	fmt.Println(2 > 1 && 3 == 3)
-	fmt.Println(3 != 3 || false)
+	// function
+	fmt.Println(plus(1, 2))
+	hello()
+	fmt.Println(divmod(5, 3))
+
+	a, _ := divmod(17, 4)
+	fmt.Println(a)
+}
+
+func plus(x, y int) int {
+	return x + y
+}
+
+func hello() {
+	fmt.Println("Hello, Wolrd!")
+}
+
+func divmod(a, b int) (int, int) {
+	return a / b, a % b
 }
