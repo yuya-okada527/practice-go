@@ -4,12 +4,11 @@ import "fmt"
 
 func main() {
 	// higher order function
-	f := returnFunc()
-	f()
+	callFunction(func() {
+		fmt.Println("I'm a function.")
+	})
 }
 
-func returnFunc() func() {
-	return func() {
-		fmt.Println("I'm a function.")
-	}
+func callFunction(f func()) {
+	f()
 }
