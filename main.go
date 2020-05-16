@@ -4,33 +4,31 @@ import (
 	"fmt"
 )
 
-// パッケージ変数
-var n = 10
-
-// 型推論はできない
-// n := 10
-
 func main() {
-	// 1行コメント
-	var i int = 1
-	fmt.Println(i)
+	// 論理値
+	a := false
+	fmt.Println(a)
 
-	/*
-		複行コメント
-	*/
-	var j, k int = 2, 3
-	fmt.Println(j, k)
+	// 10進数
+	b := 10
+	fmt.Println(b)
 
-	var (
-		a = 1
-		b = true
-	)
+	// 8進数
+	c := 0755
+	fmt.Println(c)
 
-	fmt.Println(a, b)
+	// 16進数
+	d := 0x0718BEEF
+	fmt.Println(d)
 
-	p := 1
+	// キャスト
+	e := uint(17) // unsigned int
+	fmt.Println(e)
 
-	fmt.Println(p)
+	n := 1
+	f := byte(n)
+	g := int64(n)
+	h := uint32(n)
+	fmt.Println(f, g, h)
 
-	fmt.Printf("n=%d\n", n+1)
 }
