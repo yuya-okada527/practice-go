@@ -2,14 +2,14 @@ package main
 
 import "fmt"
 
-func plus(x, y int) int {
-	return x + y
+func main() {
+	// higher order function
+	f := returnFunc()
+	f()
 }
 
-var p = plus
-
-func main() {
-	// alias
-	fmt.Println(p(1, 4))
-
+func returnFunc() func() {
+	return func() {
+		fmt.Println("I'm a function.")
+	}
 }
