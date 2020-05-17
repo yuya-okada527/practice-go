@@ -3,12 +3,22 @@ package main
 import "fmt"
 
 func main() {
-	// higher order function
-	callFunction(func() {
-		fmt.Println("I'm a function.")
-	})
+	// closure
+	f := later()
+
+	fmt.Println(f("Python"))
+	fmt.Println(f("Java"))
+	fmt.Println(f("JavaScript"))
+	fmt.Println(f("Golang"))
+	fmt.Println(f("Next?"))
 }
 
-func callFunction(f func()) {
-	f()
+func later() func(string) string {
+	var store string
+
+	return func(next string) string {
+		s := store
+		store = next
+		return s
+	}
 }
