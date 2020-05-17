@@ -3,22 +3,20 @@ package main
 import "fmt"
 
 func main() {
-	// closure
-	f := later()
+	// generator
+	ints := integers()
 
-	fmt.Println(f("Python"))
-	fmt.Println(f("Java"))
-	fmt.Println(f("JavaScript"))
-	fmt.Println(f("Golang"))
-	fmt.Println(f("Next?"))
+	fmt.Println(ints())
+	fmt.Println(ints())
+	fmt.Println(ints())
+
 }
 
-func later() func(string) string {
-	var store string
+func integers() func() int {
+	var i int
 
-	return func(next string) string {
-		s := store
-		store = next
-		return s
+	return func() int {
+		i += 1
+		return i
 	}
 }
