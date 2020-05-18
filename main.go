@@ -2,21 +2,9 @@ package main
 
 import "fmt"
 
+const taxRate = 0.10
+
 func main() {
-	// generator
-	ints := integers()
-
-	fmt.Println(ints())
-	fmt.Println(ints())
-	fmt.Println(ints())
-
-}
-
-func integers() func() int {
-	var i int
-
-	return func() int {
-		i += 1
-		return i
-	}
+	// const
+	fmt.Println(100 * taxRate)
 }
