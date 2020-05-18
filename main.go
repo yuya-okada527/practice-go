@@ -2,9 +2,23 @@ package main
 
 import "fmt"
 
-const taxRate = 0.10
+const (
+	MON = iota
+	THE
+	WED
+	THR
+	FRY
+	SAT
+	SUN
+)
 
 func main() {
-	// const
-	fmt.Println(100 * taxRate)
+	// enum
+	fmt.Println(MON)
+	fmt.Println(THE)
+	fmt.Println(WED)
+	fmt.Println(THR)
+	fmt.Println(FRY)
+	fmt.Println(SAT)
+	fmt.Println(SUN)
 }
